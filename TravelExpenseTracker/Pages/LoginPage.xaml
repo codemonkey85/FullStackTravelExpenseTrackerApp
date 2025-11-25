@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TravelExpenseTracker"
+             xmlns:pages="clr-namespace:TravelExpenseTracker.Pages"
+             xmlns:viewModels="clr-namespace:TravelExpenseTracker.ViewModels"
+             x:Class="TravelExpenseTracker.Pages.LoginPage"
+             x:DataType="viewModels:LoginViewModel"
+             Shell.NavBarIsVisible="False">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label" x:Key="appName">
+                <Setter Property="FontSize" Value="25"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid RowDefinitions="Auto, Auto, Auto, *"
+          RowSpacing="15">
+
+        <Label Text="Travel Expense Tracker"
+               Grid.Row="0"
+               Style="{StaticResource appName}"/>
+
+        <Label Text="Welcome Back!"
+               Grid.Row="1"
+               FontSize="22"
+               HorizontalOptions="Center"/>
+
+        <VerticalStackLayout Grid.Row="2"
+                             Spacing="20"
+                             Padding="25">
+
+            <Entry Placeholder="Email"/>
+
+            <Entry Placeholder="Password"
+                   IsPassword="True"/>
+
+            <Button Text="Log In"
+                    FontAttributes="Bold"/>
+
+            <Label Text="Don't have an account? Register"
+                   TextColor="DarkBlue"
+                   HorizontalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding NavigateToRegisterCommand}"/>
+                </Label.GestureRecognizers>
+            </Label>
+
+        </VerticalStackLayout>
+
+    </Grid>
+
+</ContentPage>
