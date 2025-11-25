@@ -36,12 +36,14 @@
                              Spacing="20"
                              Padding="25">
 
+            <Entry Placeholder="Name"/>
+
             <Entry Placeholder="Email"/>
 
             <Entry Placeholder="Password"
                    IsPassword="True"/>
 
-            <Button Text="Log In"
+            <Button Text="Register"
                     FontAttributes="Bold"/>
 
             <Label Text="Already have an account? Login"
