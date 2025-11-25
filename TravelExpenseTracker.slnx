@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path="global.json" />
+  </Folder>
+  <Project Path="TravelExpenseTracker/TravelExpenseTracker.csproj" />
+</Solution>
